@@ -1,0 +1,78 @@
+.screws {
+  padding: 140px 0;
+
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+
+    @include laptop {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__description {
+    max-width: 1010px;
+    margin: 0 auto 60px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: rgba(36, 36, 36, 0.8);
+
+    @include laptop {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+  }
+
+  &__models {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      display: block;
+      width: 190px;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/screws-icon.svg) center / cover no-repeat;
+      transform: translate3d(-50%, -50%, 0);
+      pointer-events: none;
+
+      @include desktop {
+        width: 128px;
+      }
+
+      @include laptop {
+        width: 104px;
+      }
+    }
+
+    &-item {
+      flex: 0 0 calc(50% - 10px / 2);
+      box-sizing: border-box;
+      border: 24px solid #3758a1;
+      border-radius: 6px;
+
+      @include laptop {
+        border-width: 10px;
+      }
+
+      @include mobile {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

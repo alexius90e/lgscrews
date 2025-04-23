@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/model-viewer.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container"></div>
+    </header>
+
+    <main class="main">
+      <section class="screws">
+        <div class="container">
+          <h2 class="screws__title h2">
+            C3 Corrosion Resistance <strong>Screws</strong> For <em>DIMPLE Holes</em> Connections
+          </h2>
+
+          <div class="screws__description">
+            Dimple holes are often used to create f stronger, more secure joint by allowing the
+            screw to sit more firmly in the material. The indentation or ‘’dimple’ helps the screw
+            or fastener to fit better, preventing slipping and providing a higher level of holding
+            power.
+          </div>
+
+          <div class="screws__models">
+            <div class="screws__models-item">
+              <model-viewer
+                class="screws__models-item-viewer"
+                src="./assets/screw3.glb"
+                ar=""
+                shadow-intensity="0"
+                auto-rotate=""
+                camera-controls=""
+                touch-action="pan-y"
+                ar-status="not-presenting"
+              ></model-viewer>
+            </div>
+
+            <div class="screws__models-item">
+              <model-viewer
+                class="screws__models-item-viewer"
+                src="./assets/screw4.glb"
+                ar=""
+                shadow-intensity="0"
+                auto-rotate=""
+                camera-controls=""
+                touch-action="pan-y"
+                ar-status="not-presenting"
+              ></model-viewer>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
+  </body>
+</html>
