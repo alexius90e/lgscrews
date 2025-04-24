@@ -1,2 +1,196 @@
 .footer {
+  &__main {
+    padding: 60px 0 56px;
+    background-color: #f8f8f8;
+
+    @include laptop {
+      padding: 43px 0 27px;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+
+      @include laptop {
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+
+    &-logo {
+      flex: 0 0 auto;
+
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 100px;
+          height: auto;
+        }
+      }
+    }
+
+    &-nav {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+      gap: 20px;
+
+      @include laptop {
+        align-items: center;
+      }
+
+      &-link {
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #242424;
+        transition: color ease-out 0.2s;
+
+        &:hover {
+          color: #3758a1;
+        }
+      }
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @include laptop {
+        align-items: center;
+        order: 20;
+        gap: 14px;
+      }
+
+      &-location,
+      &-email {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(36, 36, 36, 0.8);
+
+        @include laptop {
+          text-align: center;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          width: 18px;
+          aspect-ratio: 1 / 1;
+
+          @include laptop {
+            display: none;
+          }
+        }
+      }
+
+      &-location {
+        &::before {
+          background: url(../assets/bxs_map.svg) center / cover no-repeat;
+        }
+      }
+
+      &-email {
+        transition: color ease-out 0.2s;
+
+        &:hover {
+          color: #3758a1;
+        }
+
+        &::before {
+          background: url(../assets/mdi_email.svg) center / cover no-repeat;
+        }
+      }
+    }
+
+    &-callback {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      flex: 0 0 auto;
+      gap: 10px;
+
+      @include mobile {
+        align-items: center;
+      }
+
+      &-phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 133%;
+        letter-spacing: 0.02em;
+        color: #242424;
+
+        &::before {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          width: 18px;
+          aspect-ratio: 1 / 1;
+          background: url(../assets/mdi_phone.svg) center / cover no-repeat;
+        }
+      }
+
+      &-button {
+      }
+    }
+  }
+
+  &__info {
+    padding: 27px 0 30px;
+    background-color: #3758a1;
+
+    @include laptop {
+      padding: 31px 0;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+
+      @include laptop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+
+    &-copyright {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      text-align: center;
+      color: #fff;
+    }
+  }
 }
