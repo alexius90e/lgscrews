@@ -1,0 +1,140 @@
+.advantages {
+  padding: 140px 0;
+  background: url(../assets/advantages-bg.jpg) center / cover no-repeat;
+
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin: 0 0 24px;
+
+    @include laptop {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__description {
+    max-width: 1010px;
+    margin: 0 auto 26px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: rgba(36, 36, 36, 0.8);
+
+    @include laptop {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 115%;
+    text-align: center;
+    color: #3758a1;
+
+    @include laptop {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 60px 0;
+
+    @include laptop {
+      margin: 30px 0;
+    }
+
+    &-card {
+      flex: 0 0 calc(100% / 4 - 10px / 4 * 3);
+      padding: 60px 34px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      background-color: #ffffff;
+
+      @include desktop {
+        flex: 0 0 calc(100% / 2 - 10px / 2);
+      }
+
+      @include tablet {
+        flex: 0 0 100%;
+      }
+
+      @include mobile {
+        padding: 54px 20px;
+      }
+
+      &-figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 118px;
+
+        @include laptop {
+          margin-bottom: 40px;
+        }
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          max-height: 100px;
+          height: auto;
+
+          @include laptop {
+            max-height: 80px;
+          }
+
+          @include mobile {
+            max-height: 60px;
+          }
+        }
+      }
+
+      &-title {
+        margin: 0 0 10px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 125%;
+        text-align: center;
+        color: #242424;
+
+        @include laptop {
+          font-size: 22px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 137%;
+        text-align: center;
+        color: rgba(36, 36, 36, 0.6);
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
