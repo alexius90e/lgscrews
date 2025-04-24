@@ -1,0 +1,20 @@
+.products {
+  padding: 140px 0;
+
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin: 0 auto 60px;
+    max-width: 840px;
+
+    @include laptop {
+      margin-bottom: 22px;
+    }
+  }
+}
