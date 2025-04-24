@@ -31,10 +31,10 @@
                 <a class="header__nav-link" href="#">delivery and payment</a>
                 <a class="header__nav-link" href="#">contacts</a>
               </nav>
-  
+
               <div class="header__callback">
                 <a class="header__callback-phone" href="tel:+370 612-35-69"> +370 612-35-69 </a>
-                <button class="header__callback-button button">consultation</button>
+                <button class="header__callback-button button callback-button">consultation</button>
               </div>
 
               <div class="header__contacts">
@@ -45,16 +45,13 @@
                   info@lgscrews.com
                 </a>
               </div>
-
-
             </div>
-            
           </div>
 
           <div class="header__controls">
-            <a  class="header__controls-account" href="#"></a>
-            <a  class="header__controls-basket" href="#"></a>
-            <button class="header__controls-burger" ></button>
+            <a class="header__controls-account" href="#"></a>
+            <a class="header__controls-basket" href="#"></a>
+            <button class="header__controls-burger"></button>
           </div>
         </div>
       </div>
@@ -401,7 +398,9 @@
 
             <div class="footer__main-callback">
               <a class="footer__main-callback-phone" href="tel:+370 612-35-69"> +370 612-35-69 </a>
-              <button class="footer__main-callback-button button">consultation</button>
+              <button class="footer__main-callback-button button callback-button">
+                consultation
+              </button>
             </div>
           </div>
         </div>
@@ -423,5 +422,56 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal modal-callback">
+      <div class="modal__body">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+          <div class="modal-callback__content">
+            <div class="modal-callback__title">
+              Fill out the form and get a <em>consultation</em> within 24 hours
+            </div>
+
+            <form class="modal-callback__form">
+              <fieldset class="modal-callback__form-input">
+                <input
+                  class="modal-callback__form-input-item"
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  required
+                />
+              </fieldset>
+
+              <fieldset class="modal-callback__form-input">
+                <input
+                  class="modal-callback__form-input-item"
+                  type="tel"
+                  placeholder="Phone"
+                  name="phone"
+                  required
+                />
+              </fieldset>
+
+              <label class="modal-callback__form-checkbox">
+                <input
+                  class="modal-callback__form-checkbox-input"
+                  type="checkbox"
+                  name="agreement"
+                  required
+                />
+                <a class="modal-callback__form-checkbox-link" href="#" target="_blank">
+                  Consent to the processing of personal data
+                </a>
+              </label>
+
+              <fieldset class="modal-callback__form-submit">
+                <button class="modal-callback__form-submit-button button">consultation</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

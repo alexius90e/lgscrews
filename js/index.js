@@ -27,3 +27,36 @@ if (headerBurger && headerMenu) {
     }
   });
 }
+
+/// callback modal
+
+const callbackButtons = document.querySelectorAll('.callback-button');
+const modals = document.querySelectorAll('.modal');
+const modalCallback = document.querySelector('.modal-callback');
+const modalCallbackForm = document.querySelector('.modal-callback__form');
+
+callbackButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (modalCallback) {
+      modalCallback.classList.add('active');
+    }
+  });
+});
+
+modals.forEach((modal) => {
+  modal.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isClose = event.target.classList.contains('modal__close');
+
+    if (isLayout || isClose) {
+      event.currentTarget.classList.remove('active');
+    }
+  });
+});
+
+if (modalCallbackForm && modalCallback) {
+  modalCallbackForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    modalCallback.classList.remove('active')
+  });
+}
