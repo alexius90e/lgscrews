@@ -50,6 +50,11 @@ input[type='password'] {
   border-radius: 4px;
   outline: none;
   background-color: #f5f5f5;
+
+  @include mobile {
+    padding: 22px 19px;
+    font-size: 16px;
+  }
 }
 
 .h1,

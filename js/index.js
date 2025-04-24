@@ -30,9 +30,10 @@ if (headerBurger && headerMenu) {
 
 /// callback modal
 
-const callbackButtons = document.querySelectorAll('.callback-button');
 const modals = document.querySelectorAll('.modal');
 const modalCallback = document.querySelector('.modal-callback');
+const modalThanks = document.querySelector('.modal-thanks');
+const callbackButtons = document.querySelectorAll('.callback-button');
 const modalCallbackForm = document.querySelector('.modal-callback__form');
 
 callbackButtons.forEach((button) => {
@@ -54,9 +55,10 @@ modals.forEach((modal) => {
   });
 });
 
-if (modalCallbackForm && modalCallback) {
+if (modalCallbackForm) {
   modalCallbackForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    modalCallback.classList.remove('active')
+    if (modalCallback) modalCallback.classList.remove('active');
+    if (modalThanks) modalThanks.classList.add('active');
   });
 }
