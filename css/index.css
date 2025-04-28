@@ -35,7 +35,8 @@ img {
 input[type=text],
 input[type=email],
 input[type=tel],
-input[type=password] {
+input[type=password],
+textarea {
   display: inline-block;
   min-height: 60px;
   width: 100%;
@@ -62,22 +63,30 @@ input[type=password] {
   input[type=text],
   input[type=email],
   input[type=tel],
-  input[type=password] {
+  input[type=password],
+  textarea {
     font-size: 16px;
   }
 }
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=tel]:focus,
-input[type=password]:focus {
+input[type=password]:focus,
+textarea:focus {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 input[type=text]:user-invalid,
 input[type=email]:user-invalid,
 input[type=tel]:user-invalid,
-input[type=password]:user-invalid {
+input[type=password]:user-invalid,
+textarea:user-invalid {
   color: #ff3c3c;
   border: 1px solid rgba(255, 60, 60, 0.2);
+}
+
+textarea {
+  min-height: 140px;
+  resize: none;
 }
 
 .h1,
@@ -2882,6 +2891,196 @@ model-viewer {
   }
 }
 .create-account__form-submit-button {
+  min-height: 60px;
+  width: 100%;
+}
+
+.contacts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 58px;
+}
+@media (max-width: 1400px) {
+  .contacts__wrapper {
+    gap: 50px 24px;
+  }
+}
+@media (max-width: 1024px) {
+  .contacts__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 962px;
+          flex: 0 1 962px;
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .contacts__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.contacts__info-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+.contacts__info-links-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #242424;
+}
+.contacts__info-links-item::before {
+  content: "";
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgba(36, 36, 36, 0.1);
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  background-color: #f8f8f8;
+}
+.contacts__info-links-item_location::before {
+  background-image: url(../assets/bxs_map.svg);
+}
+.contacts__info-links-item_email::before {
+  background-image: url(../assets/mdi_email.svg);
+}
+.contacts__info-links-item_phone::before {
+  background-image: url(../assets/mdi_phone.svg);
+}
+.contacts__info-map iframe {
+  width: 100%;
+  height: 321px;
+}
+.contacts__callback {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 500px;
+          flex: 0 1 500px;
+}
+@media (max-width: 1024px) {
+  .contacts__callback {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.contacts__callback-title {
+  margin: 0 0 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #242424;
+}
+@media (max-width: 1024px) {
+  .contacts__callback-title {
+    margin-bottom: 24px;
+  }
+}
+.contacts__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+.contacts__form-checkbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  margin: 24px 0 0;
+}
+.contacts__form-checkbox::before {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  -webkit-transition: background-color ease-out 0.2s;
+  transition: background-color ease-out 0.2s;
+  cursor: pointer;
+}
+.contacts__form-checkbox:has(input:checked)::before {
+  background: url(../assets/mdi_tick.svg) center/24px no-repeat;
+  background-color: #3758a1;
+}
+.contacts__form-checkbox-input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+}
+.contacts__form-checkbox-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-align: center;
+  color: rgba(36, 36, 36, 0.6);
+}
+@media (max-width: 576px) {
+  .contacts__form-checkbox-link {
+    font-size: 13px;
+  }
+}
+.contacts__form-submit-button {
   min-height: 60px;
   width: 100%;
 }

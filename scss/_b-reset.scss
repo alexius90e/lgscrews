@@ -36,7 +36,8 @@ img {
 input[type='text'],
 input[type='email'],
 input[type='tel'],
-input[type='password'] {
+input[type='password'],
+textarea {
   display: inline-block;
   min-height: 60px;
   width: 100%;
@@ -67,6 +68,11 @@ input[type='password'] {
     color: #ff3c3c;
     border: 1px solid rgba(255, 60, 60, 0.2);
   }
+}
+
+textarea {
+  min-height: 140px;
+  resize: none;
 }
 
 .h1,
