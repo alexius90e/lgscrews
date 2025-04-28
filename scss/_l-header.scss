@@ -142,12 +142,13 @@
 
   &__nav {
     display: flex;
-    align-items: center;
-    gap: 60px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 0 1 604px;
+    gap: 10px 32px;
 
     @include desktop {
       flex-wrap: wrap;
-      gap: 10px 32px;
     }
 
     @include laptop {

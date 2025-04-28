@@ -1,2 +1,13 @@
 .main {
+  min-height: 100dvh;
+  padding: 140px 0;
+  box-sizing: border-box;
+
+  @include laptop {
+    padding: 120px 0 80px;
+  }
+
+  @include mobile {
+    padding: 116px 0 50px;
+  }
 }

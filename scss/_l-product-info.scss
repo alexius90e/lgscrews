@@ -1,14 +1,4 @@
 .product-info {
-  padding: 140px 0;
-
-  @include laptop {
-    padding: 120px 0 80px;
-  }
-
-  @include mobile {
-    padding: 116px 0 50px;
-  }
-
   &__title {
     margin: 0 0 40px;
     text-align: left;
@@ -226,6 +216,7 @@
         border: none;
         outline: none;
         background: rgba($color: #ffffff, $alpha: 0);
+        appearance: textfield;
         -moz-appearance: textfield;
 
         &::-webkit-outer-spin-button,

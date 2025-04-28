@@ -1,12 +1,12 @@
 .products {
-  padding: 140px 0;
+  padding: 140px 0 0;
 
   @include laptop {
-    padding: 100px 0;
+    padding: 100px 0 0;
   }
 
   @include mobile {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
 
   &__title {

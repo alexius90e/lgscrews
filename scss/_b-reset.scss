@@ -38,22 +38,35 @@ input[type='email'],
 input[type='tel'],
 input[type='password'] {
   display: inline-block;
+  min-height: 60px;
   width: 100%;
-  padding: 21px 26px;
+  padding: 18px 26px;
   box-sizing: border-box;
   font-weight: 500;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: -0.04em;
   color: #242424;
-  border: none;
+  border: 1px solid #f5f5f5;
   border-radius: 4px;
   outline: none;
   background-color: #f5f5f5;
+  transition-property: border;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
 
   @include mobile {
     padding: 22px 19px;
     font-size: 16px;
+  }
+
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &:user-invalid {
+    color: #ff3c3c;
+    border: 1px solid rgba(255, 60, 60, 0.2);
   }
 }
 

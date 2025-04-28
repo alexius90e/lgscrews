@@ -1,0 +1,13 @@
+.labeled-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    color: rgba(36, 36, 36, 0.7);
+  }
+}
