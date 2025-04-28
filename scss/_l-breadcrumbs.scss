@@ -1,0 +1,49 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 0 0 60px;
+
+  @include laptop {
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+
+  &__link,
+  &__current {
+    flex: 0 0 auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: rgba(36, 36, 36, 0.6);
+    transition: color ease-out 0.2s;
+
+    &:hover {
+      color: #3758a1;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      flex: 0 0 auto;
+      width: 8px;
+      height: 16px;
+      background: url(../assets/weui_arrow-filled.svg) center /cover ;
+      filter: brightness(0%);
+    }
+  }
+
+  &__current {
+    color: #242424;
+  }
+}

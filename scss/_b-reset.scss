@@ -58,7 +58,8 @@ input[type='password'] {
 }
 
 .h1,
-.h2 {
+.h2,
+.h3 {
   margin: 0;
   text-transform: uppercase;
   text-align: center;
@@ -110,6 +111,31 @@ input[type='password'] {
 
   @include laptop {
     font-size: 48px;
+  }
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 125%;
+  }
+}
+
+.h3 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 116%;
+  letter-spacing: -0.04em;
+  text-align: left;
+
+  @include desktop {
+    font-size: 54px;
+  }
+
+  @include laptop {
+    font-size: 44px;
   }
 
   @include tablet {

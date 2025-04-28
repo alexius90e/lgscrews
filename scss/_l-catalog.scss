@@ -1,0 +1,64 @@
+.catalog {
+  padding: 140px 0 0;
+
+  @include laptop {
+    padding: 116px 0 0;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    text-align: left;
+
+    @include laptop {
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__info {
+    padding: 140px 0;
+
+    @include laptop {
+      padding: 80px 0;
+    }
+
+    @include mobile {
+      padding: 50px 0;
+    }
+
+    &-title {
+      margin: 0 0 24px;
+
+      @include laptop {
+        margin-bottom: 18px;
+      }
+
+      @include mobile {
+        margin-bottom: 14px;
+        text-align: left;
+      }
+    }
+
+    &-description {
+      max-width: 1110px;
+      margin: 0 auto;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      text-align: center;
+      color: rgba(36, 36, 36, 0.8);
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include mobile {
+        font-size: 15px;
+        text-align: left;
+      }
+    }
+  }
+}
