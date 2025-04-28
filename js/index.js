@@ -62,3 +62,46 @@ if (modalCallbackForm) {
     if (modalThanks) modalThanks.classList.add('active');
   });
 }
+
+/// product-info
+
+const productThumbsSwiperEl = document.querySelector('.product-info__gallery-thumbs .swiper');
+const productMainSwiperEl = document.querySelector('.product-info__gallery-main .swiper');
+const productThumbsSwiperPrevEl = document.querySelector('.product-info__gallery-thumbs-prev');
+const productThumbsSwiperNextEl = document.querySelector('.product-info__gallery-thumbs-next');
+
+if (
+  productThumbsSwiperEl &&
+  productMainSwiperEl &&
+  productThumbsSwiperPrevEl &&
+  productThumbsSwiperNextEl
+) {
+  const productThumbsSwiper = new Swiper(productThumbsSwiperEl, {
+    spaceBetween: 4,
+    slidesPerView: 1,
+    breakpoints: {
+      320: {
+        slidesPerView: 4,
+      },
+      480: {
+        slidesPerView: 5,
+      },
+      768: {
+        slidesPerView: 6,
+      },
+    },
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  const productMainSwiper = new Swiper(productMainSwiperEl, {
+    spaceBetween: 10,
+    navigation: {
+      prevEl: productThumbsSwiperPrevEl,
+      nextEl: productThumbsSwiperNextEl,
+    },
+    thumbs: {
+      swiper: productThumbsSwiper,
+    },
+  });
+}

@@ -53,6 +53,10 @@
         @include laptop {
           width: 90px;
         }
+
+        @include mobile {
+          width: 80px;
+        }
       }
 
       &-text {
