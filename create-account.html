@@ -60,16 +60,31 @@
     </header>
 
     <main class="main">
-      <section class="sign-in">
+      <section class="create-account">
         <div class="container">
           <div class="breadcrumbs">
             <a class="breadcrumbs__link" href="./">Home</a>
-            <span class="breadcrumbs__current">Sign in</span>
+            <span class="breadcrumbs__current">Create an account</span>
           </div>
 
-          <h2 class="sign-in__title h3">Sign in</h2>
+          <h2 class="create-account__title h3">Create an account</h2>
 
-          <form class="sign-in__form">
+          <form class="create-account__form">
+            <label class="labeled-input">
+              <span class="labeled-input__text">First name*:</span>
+              <input class="labeled-input__input" type="text" required />
+            </label>
+
+            <label class="labeled-input">
+              <span class="labeled-input__text">Last name*:</span>
+              <input class="labeled-input__input" type="text" required />
+            </label>
+
+            <label class="labeled-input">
+              <span class="labeled-input__text">Phone*:</span>
+              <input class="labeled-input__input" type="tel" required />
+            </label>
+
             <label class="labeled-input">
               <span class="labeled-input__text">E-mail*:</span>
               <input class="labeled-input__input" type="email" required />
@@ -81,13 +96,14 @@
               <span class="labeled-input__show"></span>
             </label>
 
-            <fieldset class="sign-in__form-links">
-              <a class="sign-in__form-links-item" href="#">Don’t have an account?</a>
-              <a class="sign-in__form-links-item" href="#">Forgot your password?</a>
-            </fieldset>
+            <label class="labeled-input labeled-input_password">
+              <span class="labeled-input__text">Repeat the password*:</span>
+              <input class="labeled-input__input" type="password" required />
+              <span class="labeled-input__show"></span>
+            </label>
 
-            <div class="sign-in__form-submit">
-              <button class="sign-in__form-submit-button button">sign in</button>
+            <div class="create-account__form-submit">
+              <button class="create-account__form-submit-button button">Registration</button>
             </div>
           </form>
         </div>
