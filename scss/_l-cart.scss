@@ -1,0 +1,327 @@
+.cart {
+  padding: 140px 0;
+
+  @include laptop {
+    padding: 120px 0 80px;
+  }
+
+  @include mobile {
+    padding: 116px 0 50px;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    text-align: left;
+
+    @include laptop {
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__main {
+    flex: 1 1 75%;
+
+    @include desktop {
+      flex: 1 1 calc(100% - 310px);
+    }
+
+    @include laptop {
+      flex: 1 1 100%;
+    }
+
+    &-login {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px 24px;
+      margin: 0 0 10px;
+      padding: 30px 40px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      background-color: #f8f8f8;
+
+      @include laptop {
+        flex-wrap: wrap;
+        padding: 24px;
+      }
+
+      &-info {
+        &-title,
+        &-text {
+          font-size: 15px;
+          line-height: 200%;
+
+          @include laptop {
+            font-size: 14px;
+            line-height: 160%;
+          }
+        }
+
+        &-title {
+          font-weight: 600;
+          text-transform: uppercase;
+          color: #242424;
+        }
+
+        &-text {
+          font-weight: 500;
+          color: rgba(36, 36, 36, 0.8);
+        }
+      }
+
+      &-button {
+        flex: 0 0 auto;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        flex: 1 1 100%;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+
+        @include laptop {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        &-figure {
+          flex: 0 0 100px;
+          border-radius: 6px;
+
+          @include laptop {
+            flex: 0 0 80px;
+          }
+
+          &-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        &-info {
+          flex: 1 1 auto;
+
+          @include laptop {
+            flex: 1 1 calc(100% - 100px);
+          }
+
+          &-title {
+            margin: 0 0 8px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 137%;
+            color: #242424;
+          }
+
+          &-details {
+            &-item {
+              &-name,
+              &-value {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 167%;
+              }
+
+              &-name {
+                color: rgba(36, 36, 36, 0.6);
+              }
+
+              &-value {
+                color: #242424;
+              }
+            }
+          }
+        }
+
+        &-controls {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          flex: 0 5 530px;
+          gap: 10px;
+        }
+
+        &-quantity {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex: 0 0 auto;
+          max-width: 80px;
+          gap: 4px;
+          padding: 10px;
+          box-sizing: border-box;
+          border-radius: 5px;
+          background-color: #f8f8f8;
+
+          &-plus,
+          &-minus {
+            display: block;
+            flex: 0 0 auto;
+            width: 9px;
+            height: 18px;
+            padding: 0;
+            border: none;
+            background: url(../assets/weui_arrow-filled.svg) center / cover no-repeat;
+            transition-property: filter;
+            transition-timing-function: ease-out;
+            transition-duration: 0.2s;
+            filter: brightness(0%);
+            cursor: pointer;
+
+            &:hover {
+              filter: brightness(100%);
+            }
+          }
+
+          &-plus {
+            transform: rotate(180deg);
+          }
+
+          &-count {
+            display: block;
+            width: 32px;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            color: #242424;
+            text-align: center;
+            border: none;
+            outline: none;
+            background: rgba($color: #ffffff, $alpha: 0);
+            -moz-appearance: textfield;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+
+        &-price,
+        &-total {
+          flex: 1 0 10%;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 100%;
+          color: #242424;
+          text-align: center;
+
+          @include laptop {
+            font-size: 18px;
+          }
+
+          @include mobile {
+            font-size: 16px;
+          }
+        }
+
+        &-delete {
+          flex: 0 0 auto;
+
+          &-button {
+            display: block;
+            width: 30px;
+            padding: 0;
+            aspect-ratio: 1 / 1;
+            box-sizing: border-box;
+            border: none;
+            background: url(../assets/delete-outline.svg) center / cover no-repeat;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(100% - 75% - 10px);
+    padding: 44px 36px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+
+    @include desktop {
+      flex: 0 0 300px;
+    }
+
+    @include laptop {
+      flex: 1 1 100%;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 0 0 24px;
+      margin: 0 0 24px;
+      list-style-type: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      &-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+
+        &-name,
+        &-value {
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 100%;
+          text-transform: uppercase;
+        }
+
+        &-name {
+          color: rgba(36, 36, 36, 0.6);
+        }
+
+        &-value {
+          text-align: right;
+          color: #242424;
+        }
+      }
+    }
+
+    &-total {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+
+      &-name,
+      &-value {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #242424;
+      }
+    }
+  }
+}
