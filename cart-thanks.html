@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <script src="./js/swiper-bundle.min.js" defer></script>
+    <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/model-viewer.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="#" class="header__logo-link">
+              <img class="header__logo-link-image" src="./assets/logo.svg" alt="logo" />
+              <div class="header__logo-link-text">
+                Light Gauge steel framing <strong>Screws</strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="header__menu">
+            <div class="header__menu-wrapper">
+              <nav class="header__nav">
+                <a class="header__nav-link" href="#">about us</a>
+                <a class="header__nav-link" href="#">cataloge</a>
+                <a class="header__nav-link" href="#">delivery and payment</a>
+                <a class="header__nav-link" href="#">contacts</a>
+              </nav>
+
+              <div class="header__callback">
+                <a class="header__callback-phone" href="tel:+370 612-35-69"> +370 612-35-69 </a>
+                <button class="header__callback-button button callback-button">consultation</button>
+              </div>
+
+              <div class="header__contacts">
+                <span class="header__contacts-location">
+                  Taikos pr. 15B, Visaginas, Lithuania LT-31107
+                </span>
+                <a class="header__contacts-email" href="mailto:info@lgscrews.com">
+                  info@lgscrews.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header__controls">
+            <a class="header__controls-account" href="#"></a>
+            <a class="header__controls-basket" href="#"></a>
+            <button class="header__controls-burger"></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="cart-thanks">
+        <div class="container">
+          <div class="breadcrumbs">
+            <a class="breadcrumbs__link" href="./">Home</a>
+            <span class="breadcrumbs__current">Сart</span>
+          </div>
+
+          <div class="cart-thanks__wrapper">
+            <figure class="cart-thanks__icon">
+              <img
+                class="cart-thanks__icon-image"
+                src="./assets/teenyicons_tick-circle-outline.svg"
+                alt="circle"
+              />
+            </figure>
+
+            <h4 class="cart-thanks__title">Your order has been placed!</h4>
+
+            <div class="cart-thanks__text">
+              We have received your application and will contact you as soon as possible.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="container">
+          <div class="footer__main-wrapper">
+            <div class="footer__main-logo">
+              <a class="footer__main-logo-link" href="#">
+                <img class="footer__main-logo-link-image" src="./assets/logo.svg" alt="logo" />
+              </a>
+            </div>
+
+            <nav class="footer__main-nav">
+              <a class="footer__main-nav-link" href="#">about us</a>
+              <a class="footer__main-nav-link" href="#">cataloge</a>
+              <a class="footer__main-nav-link" href="#">delivery and payment</a>
+              <a class="footer__main-nav-link" href="#">contacts</a>
+            </nav>
+
+            <div class="footer__main-contacts">
+              <span class="footer__main-contacts-location">
+                Taikos pr. 15B, Visaginas, Lithuania LT-31107
+              </span>
+              <a class="footer__main-contacts-email" href="mailto:info@lgscrews.com">
+                info@lgscrews.com
+              </a>
+            </div>
+
+            <div class="footer__main-callback">
+              <a class="footer__main-callback-phone" href="tel:+370 612-35-69"> +370 612-35-69 </a>
+              <button class="footer__main-callback-button button callback-button">
+                consultation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__info">
+        <div class="container">
+          <div class="footer__info-wrapper">
+            <a class="footer__info-link" href="#" target="_blank">Privacy Policy</a>
+            <span class="footer__info-copyright">© 2025 LGSCREWS. ll Rights Reserved</span>
+            <a
+              class="footer__info-link"
+              href="https://www.grabberpro.com/TermsofUse"
+              target="_blank"
+            >
+              Terms of Use
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal modal-callback">
+      <div class="modal__body">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+          <div class="modal-callback__content">
+            <div class="modal-callback__title">
+              Fill out the form and get a <em>consultation</em> within 24 hours
+            </div>
+
+            <form class="modal-callback__form">
+              <fieldset class="modal-callback__form-input">
+                <input
+                  class="modal-callback__form-input-item"
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  required
+                />
+              </fieldset>
+
+              <fieldset class="modal-callback__form-input">
+                <input
+                  class="modal-callback__form-input-item"
+                  type="tel"
+                  placeholder="Phone"
+                  name="phone"
+                  required
+                />
+              </fieldset>
+
+              <label class="modal-callback__form-checkbox">
+                <input
+                  class="modal-callback__form-checkbox-input"
+                  type="checkbox"
+                  name="agreement"
+                  required
+                />
+                <a class="modal-callback__form-checkbox-link" href="#" target="_blank">
+                  Consent to the processing of personal data
+                </a>
+              </label>
+
+              <fieldset class="modal-callback__form-submit">
+                <button class="modal-callback__form-submit-button button">consultation</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-thanks">
+      <div class="modal__body">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+          <div class="modal-thanks__content">
+            <figure class="modal-thanks__figure">
+              <img src="./assets/teenyicons_tick-circle-outline.svg" alt="circle" />
+            </figure>
+
+            <div class="modal-thanks__title">Thanks!</div>
+
+            <div class="modal-thanks__text">
+              We have received your application and will contact you as soon as possible.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

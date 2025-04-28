@@ -1,9 +1,10 @@
 .main {
-  min-height: 100dvh;
+  min-height: calc(100dvh - 314px);
   padding: 140px 0;
   box-sizing: border-box;
 
   @include laptop {
+    min-height: calc(100dvh - 625px);
     padding: 120px 0 80px;
   }
 
