@@ -63,7 +63,6 @@ input[type=password] {
   input[type=email],
   input[type=tel],
   input[type=password] {
-    padding: 22px 19px;
     font-size: 16px;
   }
 }
@@ -237,12 +236,32 @@ model-viewer {
           flex-direction: column;
   gap: 10px;
 }
-.labeled-input-text {
+.labeled-input_password {
+  position: relative;
+}
+.labeled-input__text {
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -0.04em;
   color: rgba(36, 36, 36, 0.7);
+}
+.labeled-input_password .labeled-input__input {
+  padding-right: 60px;
+}
+.labeled-input__show {
+  display: none;
+}
+.labeled-input_password .labeled-input__show {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 5;
+  display: block;
+  width: 24px;
+  aspect-ratio: 1/1;
+  background: url(../assets/mdi_eye.svg) center/cover no-repeat;
+  cursor: pointer;
 }
 
 .header {
@@ -2764,6 +2783,70 @@ model-viewer {
   .registration-successful__text {
     font-size: 16px;
   }
+}
+
+.sign-in__title {
+  margin: 58px 0 34px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .sign-in__title {
+    margin: 32px 0;
+  }
+}
+@media (max-width: 576px) {
+  .sign-in__title {
+    margin: 24px 0;
+    text-align: left;
+  }
+}
+.sign-in__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .sign-in__form {
+    max-width: none;
+  }
+}
+.sign-in__form-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 13px 24px;
+  margin: 2px 0 12px;
+  padding: 0;
+  border: none;
+}
+.sign-in__form-links-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #3758a1;
+}
+.sign-in__form-submit-button {
+  min-height: 60px;
+  width: 100%;
 }
 
 .footer__main {

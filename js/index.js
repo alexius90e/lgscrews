@@ -105,3 +105,22 @@ if (
     },
   });
 }
+
+/// labeled-input_password
+
+const labeledPasswordInputEls = document.querySelectorAll('.labeled-input_password');
+
+labeledPasswordInputEls.forEach((labeledInputEl) => {
+  labeledInputEl.addEventListener('click', (event) => {
+    const isShowEl = event.target.classList.contains('labeled-input__show');
+    const inputEl = event.currentTarget.querySelector('.labeled-input__input');
+
+    if (isShowEl && inputEl) {
+      if (inputEl.getAttribute('type') === 'text') {
+        inputEl.setAttribute('type', 'password');
+      } else {
+        inputEl.setAttribute('type', 'text');
+      }
+    }
+  });
+});

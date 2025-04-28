@@ -1,0 +1,55 @@
+.sign-in {
+  &__title {
+    margin: 58px 0 34px;
+    text-align: center;
+
+    @include laptop {
+      margin: 32px 0;
+    }
+
+    @include mobile {
+      margin: 24px 0;
+      text-align: left;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 500px;
+    margin: 0 auto;
+
+    @include mobile {
+      max-width: none;
+    }
+
+    &-links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 13px 24px;
+      margin: 2px 0 12px;
+      padding: 0;
+      border: none;
+
+      &-item {
+        flex: 0 0 auto;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #3758a1;
+      }
+    }
+
+    &-submit {
+      &-button {
+        min-height: 60px;
+        width: 100%;
+      }
+    }
+  }
+}

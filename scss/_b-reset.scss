@@ -56,7 +56,6 @@ input[type='password'] {
   transition-duration: 0.2s;
 
   @include mobile {
-    padding: 22px 19px;
     font-size: 16px;
   }
 
